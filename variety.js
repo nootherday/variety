@@ -28,7 +28,7 @@ if (typeof slaveOk !== 'undefined') {
     db.getMongo().setSlaveOk();
   }
 }
-
+/*
 var knownDatabases = db.adminCommand('listDatabases').databases;
 if(typeof knownDatabases !== 'undefined') { // not authorized user receives error response (json) without databases key
   knownDatabases.forEach(function(d){
@@ -50,7 +50,7 @@ if(typeof knownDatabases !== 'undefined') { // not authorized user receives erro
           'Possible database options are: ' + dbs.join(', ') + '.';
   }
 }
-
+*/
 var collNames = db.getCollectionNames().join(', ');
 if (typeof collection === 'undefined') {
   throw 'You have to supply a \'collection\' variable, à la --eval \'var collection = "animals"\'.\n'+
